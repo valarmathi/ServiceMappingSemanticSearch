@@ -1,5 +1,5 @@
 from flask import Flask
-from HotelRecommendationBot import HotelRecommendationBot
+from SemanticSearchBot import SemanticSearchBot
 
 app = Flask(__name__)
 
@@ -8,10 +8,9 @@ def hello():
     return "Hello World!!!"
 
 if __name__=='__main__':
-    print("Welcome to Hotel Recommendation chatbot");
+    print("Welcome to Sematic Search. You can get the relevant answers to your queries");
     print("===================================================");
-    hotelBot = HotelRecommendationBot()
-    hotelBot.dialog_management_system()
-    #hotelBot.deploy()
+    searchBot = SemanticSearchBot()
+    searchBot.initialize_chatbot()
     print("===================================================");
-    print("Thank you for choosing Hotel Recommendation chatbot");
+    print("Thank you for choosing Sematic Search chatbot");
